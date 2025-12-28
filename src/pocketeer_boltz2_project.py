@@ -466,8 +466,52 @@ class BatchPocketeerBoltz2Pipeline:
                 else:
                     logger.warning("Missing AS SMILES for Mode 3")
         
+        elif mode == 4:
+            logger.info("MODE 4: Allosteric ligand with multiple pocket constraints (pockets 1, 2, 3)")
+            
+            if pd.notna(as_smiles) and as_smiles and len(pockets) >= 2:
+                # Test AS ligand with pockets 1, 2, 3 (skip pocket 0 which is orthosteric)
+                pocket_indices = [1, 2, 3]
+                
+                for pocket_idx in pocket_indices:
+                    if pocket_idx >= len(pockets):
+                        logger.warning(f"Pocket {pocket_idx} not available (only {len(pockets)} pockets found), skipping")
+                        continue
+                    
+                    logger.info(f"Creating config for AS ligand with pocket {pocket_idx}")
+                    
+                    config = self._create_boltz2_config_with_pocket(
+                        protein_sequence,
+                        as_smiles,
+                        pockets[pocket_idx],
+                        atomarray,
+                        ligand_chain_id='A',
+                        distance_cutoff=distance_cutoff
+                    )
+                    
+                    # Update metadata for Mode 4
+                    config['_metadata']['mode'] = 4
+                    config['_metadata']['description'] = f'Allosteric ligand with pocket {pocket_idx} constraint'
+                    
+                    config_file = boltz_dir / f'mode4_as_pocket_{pocket_idx}.json'
+                    with open(config_file, 'w') as f:
+                        json.dump(config, f, indent=2)
+                    
+                    configs.append({
+                        'type': f'mode4_as_pocket_{pocket_idx}',
+                        'pocket_id': pocket_idx,
+                        'file': config_file.name,
+                        'description': f'Allosteric ligand with pocket {pocket_idx} constraint'
+                    })
+                    logger.info(f"Created: {config_file.name}")
+            else:
+                if len(pockets) < 2:
+                    logger.warning(f"Need at least 2 pockets for Mode 4, found {len(pockets)}")
+                else:
+                    logger.warning("Missing AS SMILES for Mode 4")
+        
         else:
-            raise ValueError(f"Invalid mode: {mode}. Must be 1, 2, or 3.")
+            raise ValueError(f"Invalid mode: {mode}. Must be 1, 2, 3, or 4.")
         
         return configs
     
@@ -778,11 +822,18 @@ class BatchPocketeerBoltz2Pipeline:
                 "- Pocket constraint: None",
                 ""
             ])
-        else:
+        elif mode == 3:
             lines.extend([
                 "**Mode 3**: Allosteric ligand with pocket constraint",
                 "- Ligand: Allosteric only",
                 "- Pocket constraint: Yes (pocket 1)",
+                ""
+            ])
+        else:
+            lines.extend([
+                "**Mode 4**: Allosteric ligand with multiple pocket constraints",
+                "- Ligand: Allosteric only",
+                "- Pocket constraints: Yes (pockets 1, 2, 3)",
                 ""
             ])
         
@@ -869,9 +920,9 @@ async def main():
     parser.add_argument(
         '--mode',
         type=int,
-        choices=[1, 2, 3],
+        choices=[1, 2, 3, 4],
         required=True,
-        help='Execution mode: 1=OS with pocket, 2=Both without pockets, 3=AS with pocket'
+        help='Execution mode: 1=OS with pocket 0, 2=Both without pockets, 3=AS with pocket 1, 4=AS with pockets 1,2,3'
     )
     parser.add_argument(
         '--project-root',
