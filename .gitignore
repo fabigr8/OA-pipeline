@@ -217,3 +217,4 @@ __marimo__/
 
 # excluding raw data files
 data/raw/
+results/
