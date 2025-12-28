@@ -1,0 +1,2 @@
+﻿geneName,PDB Filename,uniprotID,OS PDB ID,OS Lig ID,AS PDB ID,AS Lig ID,OS Comment,AS Comment,Fasta File,OS SMILES,AS SMILES
+CHEK1,data/raw/cifs/3f9n_cleaned.cif,O14757,2e9n,76A,3f9n,38M,,,data/raw/fastas/O14757.fasta,c1cc(ccc1c2ccc(cc2)O)c3c4c([nH]n3)-c5ccc(cc5C4)C(=O)NC6CCC(CC6)O,CCCC[C@@H](C(=O)N1CCC[C@@]2(C1)CCCNC2)SC3=Nc4ccccc4C(=O)N3c5cccc(c5)Cl

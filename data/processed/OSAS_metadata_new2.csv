@@ -1,0 +1,18 @@
+﻿geneName,PDB Filename,uniprotID,OS PDB ID,OS Lig ID,AS PDB ID,AS Lig ID,OS Comment,AS Comment,Fasta File,OS SMILES,AS SMILES
+CHEK1,data/raw/pdbs/2e9n_cleaned.PDB,O14757,2e9n,76A,3f9n,38M,,,data/raw/fastas/O14757.fasta,c1cc(ccc1c2ccc(cc2)O)c3c4c([nH]n3)-c5ccc(cc5C4)C(=O)NC6CCC(CC6)O,CCCC[C@@H](C(=O)N1CCC[C@@]2(C1)CCCNC2)SC3=Nc4ccccc4C(=O)N3c5cccc(c5)Cl
+ABL1,data/raw/pdbs/5mo4_cleaned.PDB,P00519,5mo4,NIL,3pyy,3YY,,S1; S2*,data/raw/fastas/P00519.fasta,Cc1ccc(cc1Nc2nccc(n2)c3cccnc3)C(=O)Nc4cc(cc(c4)n5cc(nc5)C)C(F)(F)F,c1ccc(cc1)n2cc(c(n2)c3ccc(cc3)F)[C@@H]4C(=O)NC(=O)N4
+Abl1,data/raw/pdbs/3k5v_cleaned.PDB,P00520,3k5v,STI,3k5v,STJ,,,data/raw/fastas/P00520.fasta,Cc1ccc(cc1Nc2nccc(n2)c3cccnc3)NC(=O)c4ccc(cc4)CN5CCN(CC5)C,c1cc(cc(c1)C(=O)N)c2cc(ncn2)Nc3ccc(cc3)OC(F)(F)F
+IGF1R,data/raw/pdbs/1jqh_cleaned.PDB,P08069,3i81,EBI,3lw0,CCX,,,data/raw/fastas/P08069.fasta,C[C@]1(CCCN1c2nc(c3cccn3n2)Nc4cc(n[nH]4)C5CC5)C(=O)Nc6ccc(nc6)F,c1cc2c(c[nH]c2c(c1)C(=O)NC3CCN(CC3)CCCCc4c[nH]c5c4cc(cc5)C#N)C#N
+CP3A4,data/raw/pdbs/3nxu_cleaned.PDB,P08684,3nxu,RIT,5a1r,STR,,,data/raw/fastas/P08684.fasta,CC(C)c1nc(cs1)CN(C)C(=O)N[C@@H](C(C)C)C(=O)N[C@@H](Cc2ccccc2)C[C@@H]([C@H](Cc3ccccc3)NC(=O)OCc4cncs4)O,CC(=O)[C@H]1CC[C@@H]2[C@@]1(CC[C@H]3[C@H]2CCC4=CC(=O)CC[C@]34C)C
+mhcA,data/raw/pdbs/1mmn_cleaned.PDB,P08799,1mmn,ANP,1yv3,BIT,,,data/raw/fastas/P08799.fasta,c1nc(c2c(n1)n(cn2)[C@H]3[C@@H]([C@@H]([C@H](O3)CO[P@](=O)(O)O[P@@](=O)(NP(=O)(O)O)O)O)O)N,Cc1ccc2c(c1)C(=O)[C@@]3(CCN(C3=N2)c4ccccc4)O
+AR,data/raw/pdbs/2ax9_cleaned.PDB,P10275,2ax9,BHM,2yhd,AV6,S1; S2*,S1; S2,data/raw/fastas/P10275.fasta,C[C@](CBr)(C(=O)Nc1ccc(c(c1)C(F)(F)F)[N+](=O)[O-])O,c1cc2cccc3c2c(c1)NC(N3)c4ccc(c(c4)O)O
+PTPN1,data/raw/pdbs/1bzc_cleaned.PDB,P18031,1bzc,TPI,1t49,892,,,data/raw/fastas/P18031.fasta, c1cc(cc2c1cc(cc2)C(F)(F)P(=O)(O)O)C(=O)N[C@@H](CCC(=O)O)C(=O)N,CCc1c(c2ccc(cc2o1)S(=O)(=O)Nc3ccc(cc3)S(=O)(=O)N)C(=O)c4cc(c(c(c4)Br)O)Br
+AKT1,data/raw/pdbs/3mvh_cleaned.PDB,P31749,3mvh,WFE,4ejn,0R4,,,data/raw/fastas/P31749.fasta, CCc1c[nH]c2c1c(ncn2)N3CC[C@@](C3)(CNC(=O)c4ccc(cc4F)F)N,CC(=O)Nc1cccc(c1)c2ccc3c(n2)n(c(n3)c4cccnc4N)c5ccc(cc5)CNC(=O)c6cccc(c6)F
+GCK,data/raw/pdbs/3fgu_cleaned.PDB,P35557,3fgu,ANP,1v4s,MRK,,,data/raw/fastas/P35557.fasta,c1nc(c2c(n1)n(cn2)[C@H]3[C@@H]([C@@H]([C@H](O3)CO[P@](=O)(O)O[P@@](=O)(NP(=O)(O)O)O)O)O)N,Cn1ccnc1Sc2cc(c(cc2F)N)C(=O)Nc3nccs3
+MAPK8,data/raw/pdbs/4izy_cleaned.PDB,P45983,4izy,1J2,3o2m,46A,,,data/raw/fastas/P45983.fasta,CS(=O)(=O)C1CCN(CC1)c2cccc3c2ccn3c4ccnc(n4)NC5CCC(CC5)O,CCCCN(Cc1ccc(cc1)c2ccccc2c3n[nH]nn3)c4nc(cc(n4)C)C
+RORC,data/raw/pdbs/5aph_cleaned.PDB,P51449,5aph,VYI,4ypq,4F1,,,data/raw/fastas/P51449.fasta, c1ccc(c(c1)Nc2cccc3c2CN(CCO3)S(=O)(=O)c4ccc(cc4)F)F, c1ccc2c(c1)c(nn2C(=O)c3c(cccc3Cl)C(F)(F)F)c4ccc(cc4)C(=O)O
+KIF11,data/raw/pdbs/3zcw_cleaned.PDB,P52732,3zcw,ADP,3wpn,B4S,,S1; S2,data/raw/fastas/P52732.fasta, c1nc(c2c(n1)n(cn2)[C@H]3[C@@H]([C@@H]([C@H](O3)CO[P@](=O)(O)OP(=O)(O)O)O)O)N,c1cc(ccc1c2ccc(c(c2)F)C(F)(F)F)S(=O)(=O)N
+bla,data/raw/pdbs/1axb_cleaned.PDB,P62593,1axb,FOS,1pzp,FTA,,,data/raw/fastas/P62593.fasta, c1ccc(cc1)COC(=O)NCP(=O)(O)O, c1ccc(cc1)Nc2ccc(cc2)N\C=C(\C#N)/c3n[nH]nn3
+CSNK2A1,data/raw/pdbs/3pe2_cleaned.PDB,P68400,3pe2,E1B,6fvf,503,,,data/raw/fastas/P68400.fasta, C#Cc1cccc(c1)Nc2c3c(cncn3)c4ccc(cc4n2)C(=O)O,COc1c(c2cc(ccc2[nH]1)F)C(=O)OCC3CCN(CC3)CCNS(=O)(=O)c4ccccc4
+PTK2,data/raw/pdbs/2ijm_cleaned.PDB,Q05397,3bz3,YAM,4ebv,0O7,S1; S2*,,data/raw/fastas/Q05397.fasta, CN(c1c(cccn1)CNc2c(cnc(n2)Nc3ccc4c(c3)CC(=O)N4)C(F)(F)F)S(=O)(=O)C,CCc1ccc(cc1)c2ccc3c(c2)-c4c(c[nH]n4)S(=O)(=O)N3C
+MAPK14,data/raw/pdbs/3kf7_cleaned.PDB,Q16539,3kf7,L9G,3new,3NE,,,data/raw/fastas/Q16539.fasta, Cc1ccc(cc1c2nnc3n2cc(cc3)CCc4ccc(cc4F)F)C(=O)N, c1cc(cc(c1)C(F)(F)F)c2c3c([nH]n2)NC(=O)C=C3C(F)(F)F
